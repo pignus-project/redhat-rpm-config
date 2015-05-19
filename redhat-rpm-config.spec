@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 30
+Version: 31
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -135,6 +135,10 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Tue May 19 2015 Florian Festi <ffesti@redhat.com> 31-1
+- Add %py_auto_byte_compile macro controlling Python bytecompilation
+(#976651)
+
 * Wed Apr 29 2015 Florian Festi <ffesti@redhat.com> 30-1
 - Fix libsymlink.attr for new magic pattern for symlinks (#1207945)
 
