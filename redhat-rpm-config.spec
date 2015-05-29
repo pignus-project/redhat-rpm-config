@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 31
+Version: 32
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -135,6 +135,10 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Fri May 29 2015 Florian Festi <ffesti@redhat.com> 32-1
+- Support out of source builds for %_configure_gnuconfig_hack (#1191788)
+- Fix typo in %kernel_module_package (#1159361)
+    
 * Tue May 19 2015 Florian Festi <ffesti@redhat.com> 31-1
 - Add %py_auto_byte_compile macro controlling Python bytecompilation
 (#976651)
