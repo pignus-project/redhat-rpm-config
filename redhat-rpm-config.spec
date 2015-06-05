@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 32
+Version: 33
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -135,6 +135,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Fri Jun 05 2015 Dan Horák <dan[at]danny.cz> 33-1
+- Mono 4 adds support for ppc64le
+
 * Fri May 29 2015 Florian Festi <ffesti@redhat.com> 32-1
 - Support out of source builds for %_configure_gnuconfig_hack (#1191788)
 - Fix typo in %kernel_module_package (#1159361)
