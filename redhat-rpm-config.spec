@@ -6,8 +6,8 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 33
-Release: 2%{?dist}
+Version: 34
+Release: 1%{?dist}
 # No version specified.
 License: GPL+
 Group: Development/System
@@ -135,6 +135,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Wed Jul 08 2015 Adam Jackson <ajax@redhat.com> 34-1
+- Fix cc1 specs mishandling of incremental linking
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 33-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
