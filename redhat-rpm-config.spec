@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 34
+Version: 35
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -135,6 +135,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Thu Jul 09 2015 Sandro Mani <manisandro@gmail.com> 35-1
+- Use %%__libsymlink_path instead of %%__libsymlink_exclude_path in libsymlink.attr
+
 * Wed Jul 08 2015 Adam Jackson <ajax@redhat.com> 34-1
 - Fix cc1 specs mishandling of incremental linking
 
