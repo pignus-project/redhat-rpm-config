@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 35
+Version: 36
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -66,6 +66,7 @@ Requires: perl-srpm-macros
 Requires: ocaml-srpm-macros
 Requires: gnat-srpm-macros
 Requires: ghc-srpm-macros
+Requires: go-srpm-macros
 Requires: rpm >= 4.11.0
 Requires: dwz >= 0.4
 Requires: zip
@@ -135,6 +136,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Fri Jul 17 2015 Florian Festi <ffesti@redhat.com> 36-1
+- Add Requires: go-srpm-macros (#1243922)
+
 * Thu Jul 09 2015 Sandro Mani <manisandro@gmail.com> 35-1
 - Use %%__libsymlink_path instead of %%__libsymlink_exclude_path in libsymlink.attr
 
