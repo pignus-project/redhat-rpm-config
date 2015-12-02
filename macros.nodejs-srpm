@@ -1,6 +1,6 @@
 # nodejs_arches lists what arches Node.js and dependent packages run on.
 #
 # Enabling Node.js on other arches requires porting the V8 JavaScript JIT to
-# those arches.
+# those arches. Support for POWER and aarch64 arrived in nodejs v4
 
-%nodejs_arches %{ix86} x86_64 %{arm}
+%nodejs_arches %{ix86} x86_64 %{arm} aarch64 %{power64}

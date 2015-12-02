@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 36
+Version: 37
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -136,6 +136,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Wed Dec  2 2015 Peter Robinson <pbrobinson@fedoraproject.org> 37-1
+- nodejs 4+ now supports aarch64 and power64
+
 * Fri Jul 17 2015 Florian Festi <ffesti@redhat.com> 36-1
 - Add Requires: go-srpm-macros (#1243922)
 
