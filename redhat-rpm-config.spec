@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 37
+Version: 38
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -136,6 +136,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Fri Jan  8 2016 Peter Robinson <pbrobinson@fedoraproject.org> 38-1
+- Add missing ARMv6 optflags
+
 * Wed Dec  2 2015 Peter Robinson <pbrobinson@fedoraproject.org> 37-1
 - nodejs 4+ now supports aarch64 and power64
 
