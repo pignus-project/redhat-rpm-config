@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 38
+Version: 39
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -67,6 +67,7 @@ Requires: ocaml-srpm-macros
 Requires: gnat-srpm-macros
 Requires: ghc-srpm-macros
 Requires: go-srpm-macros
+Requires: python-srpm-macros
 Requires: rpm >= 4.11.0
 Requires: dwz >= 0.4
 Requires: zip
@@ -136,6 +137,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Wed Jan 13 2016 Orion Poplawski <orion@cora.nwra.com> 39-1
+- Add Requires: python-srpm-macros
+
 * Fri Jan  8 2016 Peter Robinson <pbrobinson@fedoraproject.org> 38-1
 - Add missing ARMv6 optflags
 
