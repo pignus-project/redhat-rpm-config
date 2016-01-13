@@ -162,11 +162,11 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 - Mono 4 adds support for ppc64le
 
 * Fri May 29 2015 Florian Festi <ffesti@redhat.com> 32-1
-- Support out of source builds for %_configure_gnuconfig_hack (#1191788)
-- Fix typo in %kernel_module_package (#1159361)
+- Support out of source builds for %%_configure_gnuconfig_hack (#1191788)
+- Fix typo in %%kernel_module_package (#1159361)
     
 * Tue May 19 2015 Florian Festi <ffesti@redhat.com> 31-1
-- Add %py_auto_byte_compile macro controlling Python bytecompilation
+- Add %%py_auto_byte_compile macro controlling Python bytecompilation
 (#976651)
 
 * Wed Apr 29 2015 Florian Festi <ffesti@redhat.com> 30-1
