@@ -28,9 +28,13 @@
 
 # On ARM, build boxes often have only 512MB of RAM and are very slow.
 # Lower both the limits.
+%_dwz_low_mem_die_limit_arm	  4000000
 %_dwz_low_mem_die_limit_armv5tel  4000000
+%_dwz_low_mem_die_limit_armv6hl	  4000000
 %_dwz_low_mem_die_limit_armv7hl	  4000000
+%_dwz_max_die_limit_arm  	 10000000
 %_dwz_max_die_limit_armv5tel	 10000000
+%_dwz_max_die_limit_armv6hl	 10000000
 %_dwz_max_die_limit_armv7hl	 10000000
 
 %_dwz_limit() %{expand:%%{?%{1}_%{_arch}}%%{!?%{1}_%{_arch}:%%%{1}}}

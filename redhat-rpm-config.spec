@@ -7,7 +7,7 @@
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
 Version: 44
-Release: 1%{?dist}
+Release: 1%{?dist}.pi1
 # No version specified.
 License: GPL+
 Group: Development/System
@@ -144,6 +144,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Wed Nov 23 2016 Lubomir Rintel <lkundrak@v3.sk> - 44-1.pi1
+- Add dwz limits for armv6hl
+
 * Mon Oct 31 2016 Kalev Lember <klember@redhat.com> - 44-1
 - Add ldc_arches macro
 
