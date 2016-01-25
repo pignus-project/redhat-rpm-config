@@ -7,7 +7,7 @@
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
 Version: 41
-Release: 2%{?dist}
+Release: 2%{?dist}.pi1
 # No version specified.
 License: GPL+
 Group: Development/System
@@ -139,6 +139,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Wed Nov 23 2016 Lubomir Rintel <lkundrak@v3.sk> - 41-2.pi1
+- Add dwz limits for armv6hl
+
 * Thu Aug 18 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 41-2
 - Add dependency on fpc-srpm-macros.
 
