@@ -51,6 +51,7 @@ optflags: armv4tl %{__global_cflags} -march=armv4t
 optflags: armv5tel %{__global_cflags} -march=armv5te -mfloat-abi=soft
 optflags: armv5tejl %{__global_cflags} -march=armv5te -mfloat-abi=soft
 optflags: armv6l %{__global_cflags} -march=armv6 -mfloat-abi=soft
+optflags: armv6hl %{__global_cflags} -march=armv6 -mfloat-abi=hard -mfpu=vfp
 optflags: armv7l %{__global_cflags} -march=armv7-a -mfloat-abi=soft
 optflags: armv7hl %{__global_cflags} -march=armv7-a -mfpu=vfpv3-d16  -mfloat-abi=hard
 optflags: armv7hnl %{__global_cflags} -march=armv7-a -mfpu=neon  -mfloat-abi=hard

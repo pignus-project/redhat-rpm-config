@@ -7,7 +7,7 @@
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
 Version: 36
-Release: 1%{?dist}
+Release: 1%{?dist}.pi1
 # No version specified.
 License: GPL+
 Group: Development/System
@@ -136,6 +136,10 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Mon Jan 25 2016 Lubomir Rintel <lkundrak@v3.sk> - 36-1.pi1
+- Add armv6hl optflags
+- Add dwz limits for armv6hl
+
 * Fri Jul 17 2015 Florian Festi <ffesti@redhat.com> 36-1
 - Add Requires: go-srpm-macros (#1243922)
 
