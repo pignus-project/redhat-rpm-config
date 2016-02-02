@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 39
+Version: 40
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -137,6 +137,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Tue Feb 02 2016 Dan Horák <dan[at]danny.cz> 40-1
+- switch to -mcpu=power8 for ppc64le default compiler flags
+
 * Wed Jan 13 2016 Orion Poplawski <orion@cora.nwra.com> 39-1
 - Add Requires: python-srpm-macros
 
