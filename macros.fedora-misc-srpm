@@ -1,0 +1,4 @@
+# Some miscellaneous Fedora-related macros
+
+# A directory for rpm macros
+%rpmmacrodir /usr/lib/rpm/macros.d

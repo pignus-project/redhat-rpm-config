@@ -6,8 +6,8 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 40
-Release: 2%{?dist}
+Version: 41
+Release: 1%{?dist}
 # No version specified.
 License: GPL+
 Group: Development/System
@@ -26,6 +26,7 @@ Source51: redhat-hardened-ld
 # that would otherwise be providing the macros. other language/arch specific
 # macros should not be defined here but instead in the base packages that can
 # be pulled in at rpm build time, this is specific for srpm creation.
+Source100: macros.fedora-misc-srpm
 Source102: macros.mono-srpm
 Source103: macros.nodejs-srpm
 
@@ -137,6 +138,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Mon Apr 11 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 41-1
+- Add a file for miscellaneous macros, currently containing just %%rpmmacrodir.
+
 * Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 40-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
