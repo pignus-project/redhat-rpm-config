@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 41
+Version: 42
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -63,12 +63,15 @@ Source602: libsymlink.attr
 
 BuildArch: noarch
 Requires: coreutils
-Requires: perl-srpm-macros
-Requires: ocaml-srpm-macros
-Requires: gnat-srpm-macros
+
+Requires: fpc-srpm-macros
 Requires: ghc-srpm-macros
+Requires: gnat-srpm-macros
 Requires: go-srpm-macros
+Requires: ocaml-srpm-macros
+Requires: perl-srpm-macros
 Requires: python-srpm-macros
+
 Requires: rpm >= 4.11.0
 Requires: dwz >= 0.4
 Requires: zip
@@ -138,6 +141,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Tue Apr 12 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 42-1
+- Add dependency on fpc-srpm-macros.
+
 * Mon Apr 11 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 41-1
 - Add a file for miscellaneous macros, currently containing just %%rpmmacrodir.
 
