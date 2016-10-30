@@ -6,7 +6,7 @@
 
 Summary: Red Hat specific rpm configuration files
 Name: redhat-rpm-config
-Version: 43
+Version: 44
 Release: 1%{?dist}
 # No version specified.
 License: GPL+
@@ -29,6 +29,7 @@ Source51: redhat-hardened-ld
 Source100: macros.fedora-misc-srpm
 Source102: macros.mono-srpm
 Source103: macros.nodejs-srpm
+Source104: macros.ldc-srpm
 
 # Other misc macros
 Source150: macros.dwz
@@ -143,6 +144,9 @@ install -p -m 755 -t %{buildroot}%{_rpmconfigdir} kmod.prov
 %{_rpmconfigdir}/macros.d/macros.kmp
 
 %changelog
+* Mon Oct 31 2016 Kalev Lember <klember@redhat.com> - 44-1
+- Add ldc_arches macro
+
 * Wed Sep 14 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 43-1
 - Add dependency on qt5-srpm-macros.
 
